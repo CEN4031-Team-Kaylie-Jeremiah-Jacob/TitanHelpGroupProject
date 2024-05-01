@@ -1,6 +1,6 @@
 ﻿namespace TitanHelpGroupProject
 {
-    partial class newTicketForm
+    partial class NewTicketForm
     {
         /// <summary>
         /// Required designer variable.
@@ -56,10 +56,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(258, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 28);
+            this.label1.Size = new System.Drawing.Size(132, 30);
             this.label1.TabIndex = 5;
             this.label1.Text = "New Ticket";
             // 
@@ -67,7 +68,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(56, 76);
+            this.label2.Location = new System.Drawing.Point(51, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 21);
             this.label2.TabIndex = 6;
@@ -77,7 +78,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(131, 121);
+            this.label3.Location = new System.Drawing.Point(126, 151);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 21);
             this.label3.TabIndex = 7;
@@ -87,7 +88,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 162);
+            this.label4.Location = new System.Drawing.Point(7, 192);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(165, 21);
             this.label4.TabIndex = 8;
@@ -95,11 +96,10 @@
             // 
             // studentNameTextBox
             // 
-            this.studentNameTextBox.Location = new System.Drawing.Point(227, 76);
+            this.studentNameTextBox.Location = new System.Drawing.Point(222, 106);
             this.studentNameTextBox.Name = "studentNameTextBox";
             this.studentNameTextBox.Size = new System.Drawing.Size(372, 20);
             this.studentNameTextBox.TabIndex = 9;
-            this.studentNameTextBox.Text = "Enter your name";
             // 
             // fileSystemWatcher1
             // 
@@ -108,7 +108,7 @@
             // 
             // problemDescriptionTextBox
             // 
-            this.problemDescriptionTextBox.Location = new System.Drawing.Point(227, 165);
+            this.problemDescriptionTextBox.Location = new System.Drawing.Point(222, 195);
             this.problemDescriptionTextBox.Multiline = true;
             this.problemDescriptionTextBox.Name = "problemDescriptionTextBox";
             this.problemDescriptionTextBox.Size = new System.Drawing.Size(372, 106);
@@ -117,7 +117,8 @@
             // ticketDateTimePicker
             // 
             this.ticketDateTimePicker.Enabled = false;
-            this.ticketDateTimePicker.Location = new System.Drawing.Point(227, 122);
+            this.ticketDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ticketDateTimePicker.Location = new System.Drawing.Point(222, 152);
             this.ticketDateTimePicker.Name = "ticketDateTimePicker";
             this.ticketDateTimePicker.Size = new System.Drawing.Size(366, 20);
             this.ticketDateTimePicker.TabIndex = 11;
@@ -126,14 +127,15 @@
             // 
             this.submitButton.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.submitButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submitButton.Location = new System.Drawing.Point(288, 308);
+            this.submitButton.Location = new System.Drawing.Point(283, 338);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(165, 35);
             this.submitButton.TabIndex = 12;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = false;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
-            // newTicketForm
+            // NewTicketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -147,7 +149,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cancelNewTicketButton);
-            this.Name = "newTicketForm";
+            this.Name = "NewTicketForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create New Ticket";
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
